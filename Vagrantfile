@@ -33,3 +33,15 @@ Vagrant.configure("2") do |config|
   SHELL
   
 end
+
+=begin
+config.vm.provision "shell", inline: <<-SHELL
+sudo apt update
+sudo apt install net-tools -y 
+sudo ifconfig enp0s3 down
+SHELL
+
+sudo apt update
+sudo apt install network-manager -y
+
+=end
